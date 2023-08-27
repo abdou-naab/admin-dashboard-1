@@ -8,24 +8,34 @@
 body {
   padding: 0;
   margin: 0;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: minmax(var(--min-nav-width), 1fr) 5fr;
+  grid-template-rows: minmax(var(--min-header-height), 1fr) 5fr;
 }
 body * {
   margin: 0;
   padding: 0;
   border: none;
 }
-
 nav {
   background-color: black;
   color: whitesmoke;
+  grid-column: 1 / 1;
+  grid-row: 1 / span 2;
+  overflow: auto;
 }
 header {
   background-color: blue;
   color: whitesmoke;
+  grid-column: 2 / 2;
+  grid-row: 1 / 1;
 }
 .container {
   background-color: red;
   color: whitesmoke;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
 }
 img.small-icons {
   width: var(--small-icon-size);
